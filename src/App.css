@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background-color: #12131a; 
+  color: #eeeeee;
+}
+
+/* HEADER */
+.header{
+  background: linear-gradient(135deg, #0b111e 0%, #1a2333 100%);
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 4px solid #00a896; 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.header h1{
+  color: #ffffff;
+  font-size: 46px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-shadow: 0 0 10px rgba(0, 168, 150, 0.6), 0 0 20px rgba(106, 13, 173, 0.4);
+}
+
+/* NAVBAR */
+.navbar{
+  background-color: #0b0c10;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  border-bottom: 1px solid #232733;
+}
+
+.navbar a{
+  color: #a9b7c6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+  color: #00a896; 
+  text-shadow: 0 0 8px rgba(0, 168, 150, 0.5);
+}
+
+/* LISTAS */
+.hashira-container,
+.hashira-list {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card{
+  background-color: #1f2330; 
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #2d3247;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  border-color: #00a896;
+  box-shadow: 0px 0px 25px rgba(0, 168, 150, 0.4);
+}
+
+.card img{
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5)); 
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: rotate(2deg) scale(1.05);
+}
+
+.card h2{
+  margin: 20px 0 8px 0;
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.card p{
+  font-size: 16px;
+  color: #a9b7c6;
+}
+
+.tipo {
+  color: #8a2be2; 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* FOOTER */
+.footer{
+  margin-top: 60px;
+  background-color: #0b0c10;
+  color: #666d7a;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  border-top: 1px solid #1f2330;
+}
+
+/* BLOCO DE BUSCA */
+.busca-container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #1f2330;
+  border-radius: 16px;
+  border: 1px solid #2d3247;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.busca-container label{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.busca-container input{
+  width: 100%;
+  padding: 16px;
+  background-color: #12131a;
+  border: 2px solid #2d3247;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Altera a cor do título de busca para combinar com a navbar */
+.busca-container h2 {
+  color: #a9b7c6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.busca-container input:focus{
+  border-color: #00a896;
+  box-shadow: 0 0 10px rgba(0, 168, 150, 0.25);
+}
+
+.contador{
+  font-size: 18px;
+  font-weight: bold;
+  color: #a9b7c6;
+}
+
+.erro-busca{
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4a4a;
+  background-color: #2c1616;
+  border: 1px solid #5a1e1e;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* HOME PAGE & ABOUT PAGE */
+.page-home, .app-about{
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.app-about__card{
+  width: 100%;
+  max-width: 800px;
+  background-color: #1f2330;
+  padding: 45px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #2d3247;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-about__card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 168, 150, 0.15);
+}
+
+.app-about__card h2{
+  font-size: 38px;
+  color: #00a896;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.app-about__card p{
+  font-size: 19px;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+/* PÁGINA DE DETALHES */
+.hashira-detail{
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.hashira-detail__back{
+  margin-bottom: 30px;
+  text-decoration: none;
+  background-color: #00a896;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hashira-detail__back:hover{
+  background-color: #008f80;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 168, 150, 0.4);
+}
+
+.hashira-detail__card{
+  width: 100%;
+  max-width: 900px;
+  background-color: #1f2330;
+  border-radius: 20px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid #2d3247;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s;
+}
+
+.hashira-detail__card:hover {
+  box-shadow: 0 12px 40px rgba(138, 43, 226, 0.2); 
+}
+
+.hashira-detail__media{
+  flex-shrink: 0;
+}
+
+.hashira-detail__media img{
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.6));
+}
+
+.hashira-detail__body{
+  flex: 1;
+}
+
+.hashira-detail__body h2{
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2d3247;
+  padding-bottom: 10px;
+}
+
+.hashira-detail__type{
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #a9b7c6;
+}
+
+.hashira-detail__type span{
+  color: #00a896;
+  font-weight: bold;
+  background-color: #12131a;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-left: 5px;
+  border: 1px solid #2d3247;
+}
+
+.hashira-detail__desc{
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d5db;
+  background: #12131a;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #8a2be2; 
+}
+
+/* LINK DO CARD */
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+  .header h1{
+    font-size: 32px;
+  }
+  
+  .navbar{
+    gap: 15px;
+  }
+
+  .busca-container {
+    padding: 20px;
+  }
+
+  .app-about__card{
+    padding: 30px 20px;
+  }
+
+  .app-about__card h2{
+    font-size: 30px;
+  }
+
+  .hashira-detail__card{
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .hashira-detail__desc {
+    text-align: left;
+  }
+}
